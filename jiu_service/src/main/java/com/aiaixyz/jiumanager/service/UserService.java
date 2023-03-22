@@ -1,4 +1,4 @@
-package com.aiaixyz.jiumanager;
+package com.aiaixyz.jiumanager.service;
 
 import com.aiaixyz.jiumanager.entity.po.User;
 import com.aiaixyz.jiumanager.entity.vo.RespBean;
@@ -8,7 +8,7 @@ import com.aiaixyz.jiumanager.entity.vo.RespBean;
  * since JDK 1.8
  * date 2023/3/11
  */
-public interface UserService extends BaseService<User>{
+public interface UserService extends BaseService<User> {
 
     RespBean getUsernameById(int id);
 }

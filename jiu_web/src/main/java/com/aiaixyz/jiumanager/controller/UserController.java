@@ -88,7 +88,11 @@ public class UserController extends BaseServlet {
     }
 
     protected RespBean getUsernameBySessionId(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        return userService.getUsernameById((Integer) req.getSession().getAttribute("id"));
+        String id = (String) req.getSession().getAttribute("id");
+        if (id ==""){
+            return RespBean.respError("获取失败",null);
+        }Integer intId = Integer.parseInt(id);
+        return userService.getUsernameById(intId);
     }
     protected RespBean getRealNameBySessionId(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         return RespBean.respSuccess("",req.getSession().getAttribute("realname"));

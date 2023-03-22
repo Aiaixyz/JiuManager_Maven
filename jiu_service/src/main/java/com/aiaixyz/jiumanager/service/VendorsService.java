@@ -1,4 +1,4 @@
-package com.aiaixyz.jiumanager;
+package com.aiaixyz.jiumanager.service;
 
 import com.aiaixyz.jiumanager.entity.po.Vendors;
 import com.aiaixyz.jiumanager.entity.vo.RespBean;

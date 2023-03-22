@@ -1,4 +1,4 @@
-package com.aiaixyz.jiumanager;
+package com.aiaixyz.jiumanager.service;
 
 import com.aiaixyz.jiumanager.entity.po.User;
 

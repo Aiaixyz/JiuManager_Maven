@@ -8,10 +8,63 @@
     <artifactId>JiuManager_Maven</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <packaging>pom</packaging>
+    <modules>
+        <module>jiu_model</module>
+        <module>jiu_dao</module>
+        <module>jiu_service</module>
+        <module>jiu_web</module>
+    </modules>
+
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <JiuManager.version>1.0-SNAPSHOT</JiuManager.version>
+        <Servlet.version>3.1.0</Servlet.version>
+        <fastjson.version>1.2.83</fastjson.version>
+        <mysql-connector-j.version>8.0.32</mysql-connector-j.version>
     </properties>
-    
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.aiaixyz</groupId>
+                <artifactId>jiu_model</artifactId>
+                <version>${JiuManager.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aiaixyz</groupId>
+                <artifactId>jiu_dao</artifactId>
+                <version>${JiuManager.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aiaixyz</groupId>
+                <artifactId>jiu_service</artifactId>
+                <version>${JiuManager.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aiaixyz</groupId>
+                <artifactId>jiu_web</artifactId>
+                <version>${JiuManager.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${Servlet.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${mysql-connector-j.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 </project>
